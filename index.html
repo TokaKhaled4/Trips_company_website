@@ -1,0 +1,738 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <title>Trips Company</title>
+
+</head>
+
+<body>
+    <!--nav bar---------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-fluid">
+            <img src="images/logo-removebg-preview.png" alt="error" class="logo">
+            <span class="country_name">Italy</span>
+            <div class="vertical_line"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle border border-dark" href="#" role="button"
+                            data-bs-toggle="dropdown">Trips</a>
+                        <ul class="dropdown-menu mt-3">
+                            <li><a class="dropdown-item" href="#">Rome</a></li>
+                            <li><a class="dropdown-item" href="#">Milan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                </hr>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Venice</a></li>
+                            <li><a class="dropdown-item" href="#">Florence</a></li>
+                            <li><a class="dropdown-item" href="#">Venice</a></li>
+                            <li><a class="dropdown-item" href="#">Naples</a></li>
+                            <li><a class="dropdown-item" href="#">MORE...</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex form1">
+                    <input class="form-control me-3 search_bar" type="text" placeholder="Search">
+                    <button class="btn me-3" type="button">Search</button>
+                    <button class="btn" id="loginButton" type="button">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--1.section 1---------------------------------------------------------------------------->
+    <section class="section1">
+        <ul class="list fixed-top" id="icons_list">
+            <li class="list"><i class="fa-brands fa-facebook-f"></i></li>
+            <li class="list"><i class="fa-brands fa-x-twitter"></i></li>
+            <li class="list"><i class="fa-brands fa-youtube"></i></li>
+            <li class="list"><i class="fa-brands fa-instagram"></i></li>
+            <li class="list"><i class="fa-brands fa-linkedin-in"></i></li>
+          </ul>
+        <!--1.1 slide show---------------------------------------------------------------------------->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/milan.jpeg" alt="milan" class="d-block w-100 img-fluid">
+                    <div class="carousel-caption d-md-block">
+                        <div class="caption-background"></div>
+                        <div class="carousel_content">
+                            <h5>Milan</h5>
+                            <p>We had such a great time in Italy!</p>
+                            <button type="button" class="btn">Visit Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/florence.jpeg" alt="florence" class="d-block w-100 img-fluid">
+                    <div class="carousel-caption d-md-block">
+                        <div class="caption-background"></div>
+                        <div class="carousel_content">
+                            <h5>Florence</h5>
+                            <p>We had such a great time in Italy!</p>
+                            <button type="button" class="btn">Visit Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/rome.jpg" alt="rome" class="d-block w-100 img-fluid">
+                    <div class="carousel-caption d-md-block">
+                        <div class="caption-background"></div>
+                        <div class="carousel_content">
+                            <h5>Rome</h5>
+                            <p>We had such a great time in Italy!</p>
+                            <button type="button" class="btn">Visit Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/venice.jpg" alt="venice" class="d-block w-100 img-fluid">
+                    <div class="carousel-caption d-md-block">
+                        <div class="caption-background"></div>
+                        <div class="carousel_content">
+                            <h5>Venice</h5>
+                            <p>We had such a great time in Italy!</p>
+                            <button type="button" class="btn">Visit Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        
+
+        <!--1.2 modal---------------------------------------------------------------------------->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php" id="loginForm">
+                            <div class="mb-3 mt-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                                <p class="email_p">We'll never share your email with anyone else.</p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="pwd" name="pswd">
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="mySwitch" name="Remember Me"
+                                    value="yes" checked>
+                                <label class="form-check-label" for="mySwitch">Remember Me</label>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-between">
+                        <button class="btn" type="button">Login</button>
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--2.section 2---------------------------------------------------------------------------->
+    <div class="container-fluid" id="section2">
+        <div class="sec2_content">
+            <h3 class="sec2_title">WELCOME</h3>
+            <p class="sec2_p">Are you planning to visit Italy? We offer the ultimate tour in Italy, covering Rome ,
+                Venice , Milan and Florence. From one day trip to a 10 day dream vacation. We will take care of all your
+                needs.Book hotels. 24/7 Customer Service. .</p>
+            <button class="btn btn-lg bg-light" type="button" id="btn_sec2">Learn more</button>
+        </div>
+    </div>
+
+    <hr class="section_divider">
+
+    <!--3.section 3---------------------------------------------------------------------------->
+
+    <div class="container-fluid" id="section3">
+
+        <div class="sec3_title">
+            <h1>Popular destiniations in Italy</h1>
+        </div>
+
+    </div>
+
+    <!--4.accordion---------------------------------------------------------------------------->
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ROME
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Step into the heart of ancient history in Rome, a vibrant city where iconic landmarks like the
+                    Colosseum and Vatican City stand alongside bustling piazzas and charming cobblestone streets.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MILAN
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Discover the elegance and innovation of Milan, Italy's fashion and design capital, where modern
+                    skyscrapers blend seamlessly with historic cathedrals and world-renowned art collections.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    VENICE
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Experience the enchanting allure of Venice, the city of canals, where every turn reveals a stunning
+                    blend of Gothic architecture, romantic waterways, and rich cultural heritage.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section_divider">
+
+    <!--5.translation section---------------------------------------------------------------------------->
+    <div id="trans">
+
+        <div id="trans_header">
+            <div class="trans_header_title">
+                <h1>Translate From Italian To Arabic</h1>
+            </div>
+        </div>
+        <div class="trans_content">
+            <span class="s_trans">Write and Translate</span>
+            <span class="p_trans">Press Here</span>
+            <br>
+            <button class="btn btn-lg bg-light" type="button" id="btn_trans1">Copy</button>
+            <div class="tooltip1">Copy to Clipboard</div>
+            <div class="tooltip2">Copied</div>
+            <textarea class="form-control custom-textarea" rows="5" id="comment" name="text">translate:</textarea>
+
+
+        </div>
+
+
+
+    </div>
+
+    <hr class="section_divider">
+
+    <div id="trans">
+
+        <div id="trans_header">
+            <div class="trans_header_title">
+                <h1>Translate From Italian To English</h1>
+            </div>
+        </div>
+        <div class="trans_content">
+            <span class="s_trans">Write and Translate</span>
+            <span class="p_trans">Press Here</span>
+            <br>
+            <button class="btn btn-lg bg-light" type="button" id="btn_trans2">Copy</button>
+            <div class="tooltip3">Copy to Clipboard</div>
+            <div class="tooltip4">Copied</div>
+            <textarea class="form-control custom-textarea" rows="5" id="comment" name="text">translate:</textarea>
+
+
+        </div>
+
+
+
+    </div>
+
+    <hr class="section_divider">
+
+    <div id="trans">
+
+        <div id="trans_header">
+            <div class="trans_header_title">
+                <h1>Translate From Italian To French</h1>
+            </div>
+        </div>
+        <div class="trans_content">
+            <span class="s_trans">Write and Translate</span>
+            <span class="p_trans">Press Here</span>
+            <br>
+            <button class="btn btn-lg bg-light" type="button" id="btn_trans3">Copy</button>
+            <div class="tooltip5">Copy to Clipboard</div>
+            <div class="tooltip6">Copied</div>
+            <textarea class="form-control custom-textarea" rows="5" id="comment" name="text">translate:</textarea>
+
+
+        </div>
+
+
+
+    </div>
+
+    <hr class="section_divider">
+
+    <!--6.image section---------------------------------------------------------------------------->
+    <div class="img_section"></div>
+
+    <!--7.destinations cards---------------------------------------------------------------------------->
+    <div class="container-fluid" id="section4">
+        <h1>Popular Destiniations in Italy</h1>
+    </div>
+    <div class="container mt-5" id="section5">
+        <div class="row">
+            <div class="card col-4" style="width:350px;height:500px;" id="card">
+                <img class="card-img-top" src="images//por.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Portofino</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="card col-4" style="width:350px;height:500px;" id="card2">
+                <img class="card-img-top" src="images/PER.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">PERUGIA</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="card col-4 card3" style="width:350px;height:500px;" id="card">
+                <img class="card-img-top" src="images/liv.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Livorno</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container mt-5" id="section5">
+        <div class="row">
+            <div class="card col-4 card4" style="width:350px;height:500px;" id="card">
+                <img class="card-img-top" src="images/gen.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Genoa</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="card col-4" style="width:350px;height:500px;" id="card2">
+                <img class="card-img-top" src="images/lucca.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Lucca</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="card col-4 card6" style="width:350px;height:500px;" id="card">
+                <img class="card-img-top" src="images/mess.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Messina</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container mt-5" id="section6">
+        <div class="row">
+            <div class="card col-6" style="width:350px;height:500px;" id="card7">
+                <img class="card-img-top" src="images/syra.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Syracuse</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+            <div class="card col-6" style="width:350px;height:500px;" id="card8">
+                <img class="card-img-top" src="images/brin.jpg" alt="Card image" style="height:390px;">
+                <div class="card-body">
+                    <div class="card_content float-start">
+                        <h4 class="card-title">Brindisi</h4>
+                        <p class="card-text">Beautiful City in Italy</p>
+                    </div>
+                    <a href="#" class="btn float-end">Know More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--8.image2 section---------------------------------------------------------------------------->
+    <div class="img2_section"></div>
+
+    <hr class="section_divider">
+    <!--9.thanks cards---------------------------------------------------------------------------->
+
+    <div class="container-fluid" id="section7">
+        <h1>THANKS FOR</h1>
+    </div>
+
+    <div class="container" id="section8">
+
+        <div class="card float-end" style="width:380px;height:480px;border-radius:20px;" id="thank_card">
+            <img class="card-img-top top_thank" src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" alt="Card image"
+                style="width:380px;height:480px;border-radius:20px;">
+            <div class="card-img-overlay" style="width:380px;height:480px;border-radius:20px;">
+                <div class="thank_top">
+                    <h5 class="card-title" id="thank_title">All thanks and appreciation</h5>
+                    <p class="card-text" id="thank_text"><i class="fa-regular fa-clock"></i> October 15,2022</p>
+                </div>
+                <div class="thank_content">
+                    <img src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" class="rounded-circle img-thumbnail id_image"
+                        alt="Cinque Terre" style="width:120px;height:150px;">
+                    <h6 class="card-title" id="thank_title">Mr.John Doe</h6>
+                    <p class="card-text" id="thank_text">Trip Coordinator</p>
+                </div>
+            </div>
+        </div>
+        <div class="card float-end" style="width:380px;height:480px;border-radius:20px;" id="thank_card2">
+            <img class="card-img-top top_thank" src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" alt="Card image"
+                style="width:380px;height:480px;border-radius:20px;">
+            <div class="card-img-overlay" style="width:380px;height:480px;border-radius:20px;">
+                <div class="thank_top">
+                    <h5 class="card-title" id="thank_title">All thanks and appreciation</h5>
+                    <p class="card-text" id="thank_text"><i class="fa-regular fa-clock"></i> October 15,2022</p>
+                </div>
+                <div class="thank_content">
+                    <img src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" class="rounded-circle img-thumbnail id_image"
+                        alt="Cinque Terre" style="width:120px;height:150px;">
+                    <h6 class="card-title" id="thank_title">Mrs.Jane Doe</h6>
+                    <p class="card-text" id="thank_text">Travel Experience Manager</p>
+                </div>
+            </div>
+        </div>
+        <div class="card float-end" style="width:380px;height:480px;border-radius:20px;" id="thank_card">
+            <img class="card-img-top top_thank" src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" alt="Card image"
+                style="width:380px;height:480px;border-radius:20px;">
+            <div class="card-img-overlay" style="width:380px;height:480px;border-radius:20px;">
+                <div class="thank_top">
+                    <h5 class="card-title" id="thank_title">All thanks and appreciation</h5>
+                    <p class="card-text" id="thank_text"><i class="fa-regular fa-clock"></i> October 15,2022</p>
+                </div>
+                <div class="thank_content">
+                    <img src="images/de023370-2cb3-4fa7-b7de-55af13cb77da.jpeg" class="rounded-circle img-thumbnail id_image"
+                        alt="Cinque Terre" style="width:120px;height:150px;">
+                    <h6 class="card-title" id="thank_title">Mr.John Doe</h6>
+                    <p class="card-text" id="thank_text">Trip Facilitator</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr class="section_divider">
+
+    <!--10.italian architecture cards---------------------------------------------------------------------------->
+    <div class="container" id="section9">
+        <h2 class="sec9_title">italian architecture </h2>
+        <div class="card mb-3" style="height: 400px;" id="cardd">
+            <div class="row g-0">
+                <div class="col-md-9 card1_arch">
+                    <div class="card-body" id="pod_body">
+                        <h4 class="card-title" id="pod_title">The Colosseum: Rome's Grand Spectacle</h4>
+                        <p class="card-text" id="calender"><i class="fa-solid fa-calendar-days"></i> Mon, May25th 2021
+                        </p>
+                        <div class="line line1"></div>
+                        <p class="card-text">The Colosseum, a marvel of ancient Roman engineering, was built by the
+                            Flavian emperors and could host up to 80,000 spectators. This grand amphitheater,
+                            constructed with advanced techniques using travertine limestone and concrete, was the site
+                            of gladiatorial contests, animal hunts, and public spectacles. It stands as a testament to
+                            Rome's architectural ingenuity and cultural legacy, enduring through centuries despite
+                            earthquakes and stone robbing</p>
+
+                        <div class="card_btns">
+                            <button class="podcast btns"><i class="fa-solid fa-tag"></i>Podcast </button>
+                            <button class="podcast btns"><i class="fa-solid fa-clock"></i>55 mins. </button>
+                            <button class="play btns"><i class="fa-solid fa-play"></i>Play Episode </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skew-crop">
+                        <img src="images/rome.jpg" class="img-fluid rounded-start" alt="..." style="height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="height: 400px;" id="cardd">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <div class="skew-crop2">
+                        <img src="images/pisa.jpg" class="img-fluid rounded-start" alt="..." style="height: 400px;">
+                    </div>
+                </div>
+                <div class="col-md-9 card2_arch">
+                    <div class="card-body pod_body2" id="pod_body">
+                        <h4 class="card-title" id="pod_title">The Leaning Tower of Pisa</h4>
+                        <p class="card-text" id="calender"><i class="fa-solid fa-calendar-days"></i> Mon, May25th 2021
+                        </p>
+                        <div class="line line1"></div>
+                        <p class="card-text">The Leaning Tower of Pisa, an architectural marvel dating back to the 12th
+                            century, is renowned globally for its distinctive tilt. Despite numerous restoration
+                            efforts, its lean remains, captivating visitors with its unique charm and serving as a
+                            symbol of both architectural ingenuity and human perseverance.</p>
+
+                        <div class="card_btns">
+                            <button class="podcast btns"><i class="fa-solid fa-tag"></i>Podcast </button>
+                            <button class="podcast btns"><i class="fa-solid fa-clock"></i>55 mins. </button>
+                            <button class="play btns"><i class="fa-solid fa-play"></i>Play Episode </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card mb-3" style="height: 400px;" id="cardd">
+            <div class="row g-0">
+                <div class="col-md-9 card3_arch">
+                    <div class="card-body" id="pod_body">
+                        <h4 class="card-title" id="pod_title"> Florence's Architectural Marvel</h4>
+                        <p class="card-text" id="calender"><i class="fa-solid fa-calendar-days"></i> Mon, May25th 2021
+                        </p>
+                        <div class="line line1"></div>
+                        <p class="card-text">
+                            The Duomo Complex in Milan comprises the iconic Milan Cathedral, the exquisite Galleria
+                            Vittorio Emanuele II shopping arcade, and the historic Palazzo Reale. It's a captivating
+                            blend of Gothic architecture, luxury retail, and cultural heritage, attracting visitors
+                            worldwide.</p>
+
+                        <div class="card_btns">
+                            <button class="podcast btns"><i class="fa-solid fa-tag"></i>Podcast </button>
+                            <button class="podcast btns"><i class="fa-solid fa-clock"></i>55 mins. </button>
+                            <button class="play btns"><i class="fa-solid fa-play"></i>Play Episode </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skew-crop">
+                        <img src="images/giotto-bell-tower-florence.jpg" class="img-fluid rounded-start" alt="..."
+                            style="height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="height: 400px;" id="cardd">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <div class="skew-crop2">
+                        <img src="images/piazza-san-marco-acqua-alta-wallpaper-preview.jpg"
+                            class="img-fluid rounded-start" alt="..." style="height: 400px;">
+                    </div>
+                </div>
+                <div class="col-md-9 card4_arch">
+                    <div class="card-body" id="pod_body">
+                        <h4 class="card-title" id="pod_title">Piazza San Marco: Venice's Enchanting Square</h4>
+                        <p class="card-text" id="calender"><i class="fa-solid fa-calendar-days"></i> Mon, May25th 2021
+                        </p>
+                        <div class="line line1"></div>
+                        <p class="card-text">Piazza San Marco, Venice's iconic square, epitomizes the city's allure with
+                            its exquisite architecture, including St. Mark's Basilica and the Doge's Palace. During
+                            Acqua Alta, high tides flood the square, creating a magical reflection of the surrounding
+                            buildings. At night, city lights add a romantic glow to this historic hub of culture and
+                            activity, captivating visitors with its timeless beauty.</p>
+
+                        <div class="card_btns">
+                            <button class="podcast btns"><i class="fa-solid fa-tag"></i>Podcast </button>
+                            <button class="podcast btns"><i class="fa-solid fa-clock"></i>55 mins. </button>
+                            <button class="play btns"><i class="fa-solid fa-play"></i>Play Episode </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--11.join us section---------------------------------------------------------------------------->
+    <div class="container" id="section10">
+        <h2 class="sec9_title">JOIN US</h2>
+        <div class="join_us">
+            <div class="row">
+                <div class="card col-md-3 col-sm-12" id="join_card">
+                    <h3 class="join_title">Follow Us</h3>
+                    <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
+                    <h4 class="join_title2">Go to link</h4>
+                </div>
+
+                <div class="card col-md-3 col-sm-12" id="join_card">
+                    <h3 class="join_title">Conatct Us</h3>
+                    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h4 class="join_title2">Go to link</h4>
+                </div>
+
+                <div class="card col-md-3 col-sm-12" id="join_card">
+                    <h3 class="join_title">Like the page</h3>
+                    <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <h4 class="join_title2">Go to link</h4>
+                </div>
+
+                <div class="card col-md-3 col-sm-12" id="join_card">
+                    <h3 class="join_title">Subscribe Now</h3>
+                    <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                    <h4 class="join_title2">Go to link</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--12.footer---------------------------------------------------------------------------->
+
+    <div class="container-fluid" id="footer">
+        <div class="lines_foot">
+            <div class="row">
+                <div class="col-4 line11" id="line_foot"></div>
+                <div class="col-4 line12" id="line_foot"></div>
+                <div class="col-4 line13" id="line_foot"></div>
+
+            </div>
+        </div>
+
+        <div class="foot_logos">
+            <div class="row">
+                <div class="col-4 rounded-circle" id="foot_logo1">
+                    <img src="images/logo-removebg-preview.png" alt="error">
+                </div>
+                <div class="rounded-circle col-4" id="foot_logo2"><img src="images/logo-removebg-preview.png"
+                        alt="error"></div>
+                <div class="rounded-circle col-4" id="foot_logo3"><img src="images/logo-removebg-preview.png"
+                        alt="error"></div>
+            </div>
+        </div>
+
+        <h4 class="logo_title1">Trips Comapny</h4>
+        <h4 class="logo_title2">Important Links</h4>
+        <h4 class="logo_title3">Our Vision</h4>
+
+        <div class="lines_foot2">
+            <div class="row">
+                <div class="col-4 line14" id="line_foot2"></div>
+                <div class="col-4 line15" id="line_foot2"></div>
+                <div class="col-4 line16" id="line_foot2"></div>
+            </div>
+        </div>
+
+        <div class="footer_content">
+            <div class="row">
+                <div class="col-4" id="footer_content1">
+                    <p class="p_foot">Tel : 000-000-000</p>
+                    <p class="p_foot">Address : EGYPT</p>
+                    <p class="p_foot">Fax : 000-000-000</p>
+                </div>
+                <div class="col-4" id="footer_content2">
+                    <p class="p_foot2">Visit Us</p>
+                    <p class="p_foot2">Take a look</p>
+                    <p class="p_foot2">Our Location</p>
+                </div>
+                <div class="col-4" id="footer_content3">
+                    <p class="p_foot">Top provider of travel experiences.</p>
+                    <p class="p_foot"> Inspire global, sustainable adventures.</p>
+                    <p class="p_foot">Transformative and unforgettable trips.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_divider"></div>
+        <h4 class="credit_title">COPYRIGHT &copy; 2024 TOKA KHALED, TRIPS COMPANY.ALL RIGHTS</h4>
+        <div class="footer_divider2"></div>
+    </div>
+
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
